@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebe5e5;
+    position: absolute;
+}
+
+.mountain {
+    width: 1200px;
+    height: auto;
+    background: skyblue;
+    padding-top: 100px;
+    position: relative;
+}
+
+.cloud1 {
+    width: 200px;
+    height: 100px;
+    top: 50px;
+    left: 900px;
+    position: absolute;
+}
+
+div>.cloud1 {
+    animation-name: moveCloud;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveCloud {
+    0% {
+        left: 350px;
+        transform: translateX(200px);
+    }
+
+    100% {
+        right: 200px;
+        transform: scaleX(100px);
+    }
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 900px;
+}
+
+div>.sun {
+    animation-name: moveSun;
+    animation-duration: 10s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveSun {
+    0% {
+        bottom: 50px;
+        transform: translateY(300px);
+    }
+
+    100% {
+        top: 50px;
+    }
+}

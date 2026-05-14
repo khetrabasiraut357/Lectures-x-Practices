@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c1f2a8;
+    color: #333;
+}
+
+.obj1 {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    background-color: #ff6347;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: move 2s infinite alternate;
+}
+
+.obj2 {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    background-color: #ff6347;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: move 2s infinite alternate;
+}
+
+.obj3 {
+    width: 500px;
+    height: 500px;
+    object-fit: fill;
+    background-color: #ff6347;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+.float1 {
+    float: left;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-color: #ff6347;
+    margin: 20px;
+    border-radius: 10px;
+    clear: both;
+}
+
+.float2 {
+    float: right;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-color: #ff6347;
+    margin: 20px;
+    border-radius: 10px;
+    clear: right;
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    transition: .10s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-container:hover .overlay {
+    opacity: 5;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
